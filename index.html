@@ -1,27 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Html& CSS Boilerplate</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <title>Spotify</title>
     <!-- Google Fonts: https://fonts.google.com/ -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <!-- /Google Fonts -->
     <!-- Font Awesome: https://fontawesome.com/search?o=r&m=free -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- /Font Awesome -->
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <div class="container">
-        <button class="btn btn-large btn-primary">Bottone</button>
-        <div class="row gap-10">
-            <div class="col">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur culpa, ea, fuga vero vel perferendis nisi illum consectetur sed expedita, dignissimos laboriosam non nobis nostrum labore? Sint, tempore alias? Hic?</div>
-            <div class="col">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur culpa, ea, fuga vero vel perferendis nisi illum consectetur sed expedita, dignissimos laboriosam non nobis nostrum labore? Sint, tempore alias? Hic?</div>
-            <div class="col">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur culpa, ea, fuga vero vel perferendis nisi illum consectetur sed expedita, dignissimos laboriosam non nobis nostrum labore? Sint, tempore alias? Hic?</div>
-        </div>
+
+<body class="debug">
+    <div class="main-container">
+        <!-- HEADER  -->
+        <header>
+            <div class="header-top">
+                <div class="logo">
+                    <img class="img-fluid small" src="img/logo-small.svg" alt="Spotify Logo">
+                    <img class="img-fluid big" src="img/logo.svg" alt="Spotify Logo">
+                </div>
+                <nav>
+                    <ul>
+                        <li> <img src="img/home.svg" alt="home"><span>Home</span></li>
+                        <li> <img src="img/search.svg" alt="search"><span>Cerca</span></li>
+                        <li> <img src="img/libreria.svg" alt="library"><span>La tua libreria</span></li>
+                    </ul>
+                </nav>
+                <div class="playlists">
+                    <h3>PLAYLIST</h3>
+                    <div class="add-section">
+                    <span class="add">+</span> <span> Crea Playlist</span>
+                    </div>
+                    <ul>
+                        <li><span>Nome Playlist</span></li>
+                        <li><span>Nome Playlist</span></li>
+                        <li><span>Nome Playlist</span></li>
+                        <li><span>Nome Playlist</span></li>
+                        <li><span>Nome Playlist</span></li>
+                        <li><span>Nome Playlist</span></li>
+                        <li><span>Nome Playlist</span></li>
+                    </ul>
+                    </div>
     </div>
+    <div class="header-bottom">
+        <ul>
+            <li><img class="download" src="img/download.svg" alt="download"> <span>Installa app</span></li>
+        </ul>
+        <hr>
+        <ul>
+            <li>
+                <img class="img-fluid circle" src="img/profile.svg" alt="Profile Picture">
+                <span class="profile">John Doe</span>
+            </li>
+        </ul>
+    </div>
+    </header>
+    <!-- /HEADER  -->
+    <main></main>
+    </div>
+    <footer></footer>
 </body>
+
 </html>
