@@ -121,7 +121,7 @@ header {
     width: 100%;
 }
 
-.header-bottom  .download{
+.header-bottom .download {
     width: 70%;
     display: block;
     margin: 0 auto;
@@ -134,14 +134,14 @@ header {
     display: none;
 }
 
-.header-bottom .circle{
+.header-bottom .circle {
     display: block;
     background-color: #808080;
     border-radius: 100%;
     width: 1.5625rem;
     height: 1.5625rem;
     opacity: 0.8;
-    
+
 }
 
 .header-top .small {
@@ -162,27 +162,28 @@ header {
     width: 100%;
 
 }
-.header-top img{
+
+.header-top img {
     opacity: 0.8;
     width: 100%;
 }
 
-header ul{
+header ul {
     list-style: none;
 }
 
-.header-top ul li{
+.header-top ul li {
     padding-bottom: .625rem;
 }
 
-.header-top .playlists{
+.header-top .playlists {
     display: none;
     width: 100%;
     margin-top: 1.25rem;
-    
+
 }
 
-.add{
+.add {
     height: 2.5rem;
     width: 2.5rem;
     background-color: #fff;
@@ -192,20 +193,20 @@ header ul{
     text-align: center;
     font-weight: 600;
     margin-right: .625rem;
-    
+
 }
 
-.add-section{
+.add-section {
     display: flex;
-    align-items: center ;
+    align-items: center;
     margin-bottom: 1.625rem;
 }
 
-.playlists h3{
+.playlists h3 {
     padding-bottom: .625rem;
 }
 
-.header-bottom hr{
+.header-bottom hr {
     display: none;
 }
 
@@ -223,24 +224,26 @@ header ul{
 }
 
 .debug main {
-    background-color: pink;
+    border: 2px dashed pink;
 }
 
 main {
     overflow: auto;
     flex-grow: 1;
     padding: 1.25rem;
+    background-color: #141922;
 }
+
 main::-webkit-scrollbar {
     display: none;
-  }
-  
+}
+
 
 /*----------------
     FOOTER
 ------------------*/
 .debug footer {
-    background-color: #999;
+    border: 2px dashed violet;
     opacity: 1;
 }
 
@@ -251,14 +254,13 @@ footer {
     bottom: 0;
     left: 0;
     z-index: 10;
+    background-color: #282828;
 }
 
 /*----------------
     RESPONSIVE
     Mobile First
 ------------------*/
-/* XS >= 480px */
-@media screen and (min-width: 480px) {}
 
 /* S >= 576px */
 @media screen and (min-width: 576px) {
@@ -267,7 +269,7 @@ footer {
         gap: .625rem;
         padding: .9375rem .9375rem;
         overflow: auto;
-        
+
     }
 
     .header-top {
@@ -279,27 +281,28 @@ footer {
         align-items: center;
     }
 
-    .header-top span{
+    .header-top span {
         display: inline-block;
         opacity: 0.8;
     }
-    
-    .header-top img{
+
+    .header-top img {
         width: 15%;
         padding-right: .3125rem;
     }
 
-    .header-top .small{
+    .header-top .small {
         display: none;
     }
 
-    .header-top .big{
+    .header-top .big {
         display: inline;
         padding-bottom: 1.25rem;
         width: 80%;
 
     }
-     .header-top .playlists{
+
+    .header-top .playlists {
         display: block;
     }
 
@@ -308,36 +311,37 @@ footer {
         align-items: center;
     }
 
-    
-    .header-bottom{
+
+    .header-bottom {
         display: inline;
     }
+
     .header-bottom ul:nth-of-type(1) li span {
         display: inline-block;
         opacity: 0.8;
         font-size: .75rem;
         margin-left: .3125rem;
     }
+
     .header-bottom ul:nth-of-type(2) li span {
         display: inline-block;
         opacity: 1;
         font-weight: 600;
-        
-    }
 
+    }
 
     .header-bottom img {
         width: 15%;
         margin-right: .3125rem;
     }
 
-    .header-bottom .download{
+    .header-bottom .download {
         width: 10%;
         display: block;
         margin: 0;
     }
 
-    .header-bottom hr{
+    .header-bottom hr {
         display: block;
         width: 100%;
         margin: .625rem 0;
@@ -345,8 +349,8 @@ footer {
 
     header::-webkit-scrollbar {
         display: none;
-      }
-      
+    }
+
 }
 
 /* MD >= 768px */
