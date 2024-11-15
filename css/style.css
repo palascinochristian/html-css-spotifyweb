@@ -73,19 +73,33 @@ body {
     background-color: transparent;
     font-family: inherit;
     border: none;
-    padding: .375rem .75rem;
     cursor: pointer;
 }
 
-.btn-large {
-    padding: .625rem 1.25rem;
-    font-size: 1rem;
+.up {
+    color: #fff;
+    border-radius: 1.625rem;
+    border: 1px solid #fff;
+    padding: .5rem 1.875rem;
+    font-weight: 600;
+    margin-right: .9375rem
 }
 
-.btn-primary {
-    background-color: lightcoral;
-    color: #fff;
+.add {
+    height: 2.5rem;
+    width: 2.5rem;
+    background-color: #fff;
+    color: #000;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    text-align: center;
+    font-weight: 600;
+    margin-right: .625rem;
+    opacity: 0.8;
+
 }
+
+
 
 /*----------------
     HEADER
@@ -183,18 +197,7 @@ header ul {
 
 }
 
-.add {
-    height: 2.5rem;
-    width: 2.5rem;
-    background-color: #fff;
-    color: #000;
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-    text-align: center;
-    font-weight: 600;
-    margin-right: .625rem;
 
-}
 
 .add-section {
     display: flex;
@@ -230,13 +233,32 @@ header ul {
 main {
     overflow: auto;
     flex-grow: 1;
-    padding: 1.25rem;
     background-color: #141922;
 }
 
 main::-webkit-scrollbar {
     display: none;
 }
+
+
+.debug .upgrade-bar {
+    border: 2px dashed orange
+}
+
+.upgrade-bar {
+    width: 100%;
+    text-align: right;
+    background-color: #080B12;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    min-width: 12.5rem;
+    text-wrap: nowrap;
+    min-height: 4.25rem;
+    line-height: 4.25rem;
+}
+
 
 
 /*----------------
@@ -351,10 +373,14 @@ footer {
         display: none;
     }
 
-}
+    .upgrade-bar {
+        min-height: 5.25rem;
+        line-height: 5.25rem;
 
-/* MD >= 768px */
-@media screen and (min-width: 768px) {}
+    }
 
-/* LG >= 992px */
-@media screen and (min-width: 992px) {}
+    /* MD >= 768px */
+    @media screen and (min-width: 768px) {}
+
+    /* LG >= 992px */
+    @media screen and (min-width: 992px) {}
