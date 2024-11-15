@@ -9,6 +9,7 @@
     border: 2px dashed lightcoral;
     background-color: rgba(240, 128, 128, 0.2);
     min-height: 200px;
+    
 }
 
 /*----------------
@@ -49,7 +50,6 @@ a {
 
 .row {
     display: flex;
-    flex-wrap: wrap;
 }
 
 .gap-10>.col {
@@ -74,8 +74,23 @@ a {
 body {
     height: 100vh;
     font-family: "Poppins", sans-serif;
+    color: #fff;
 }
 
+h2{
+    padding-left: .625rem;
+}
+
+.section-container h3{
+    font-size: 1rem;
+
+}
+
+
+.section-container span{
+    font-size: .75rem;
+    opacity: 0.8;
+}
 /*----------------
     BUTTONS
 ------------------*/
@@ -285,8 +300,8 @@ main::-webkit-scrollbar {
     opacity: 0.7;
     font-weight: 600;
     text-align: center;
+    
 }
-
 
 .section-container {
     width: 100%;
@@ -295,7 +310,54 @@ main::-webkit-scrollbar {
 
 .debug .section-container {
     border: 2px solid red;
-    min-height: 100%;
+    /* min-height: 100%; */
+}
+
+.recently-played .row{
+    width: 100%;
+    flex-wrap: wrap;
+    margin: 0.875rem 0;
+}
+.recently-played .col{
+    width: calc(100% / 2)
+}
+
+
+.album-cover{
+    position: relative;
+
+}
+.album-cover img{
+    display: block;
+}
+
+.album-cover .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    display: none;
+}
+
+.album-cover .play{
+    color: #fff;
+    width: 100%;
+    font-size: 3.125rem
+}
+
+.album-cover:hover .overlay{
+    display: block;
+    z-index: 1;
+}
+
+.album-info{
+    padding-top: .625rem;
+    text-align: center;
 }
 
 
@@ -321,6 +383,17 @@ footer {
     RESPONSIVE
     Mobile First
 ------------------*/
+/*XS <= 480px */
+
+@media screen and (max-width: 479px) {
+
+    .album-info{
+        text-wrap: nowrap;
+        overflow: hidden;
+    }
+}
+
+
 
 /* S >= 576px */
 @media screen and (min-width: 576px) {
@@ -416,9 +489,27 @@ footer {
         line-height: 5.25rem;
 
     }
+}
+    
 
     /* MD >= 768px */
-    @media screen and (min-width: 768px) {}
+    @media screen and (min-width: 768px) {
+
+        .recently-played .col{
+            width: calc(100% / 4);
+        }
+
+        .album-cover{
+            max-width: 100%;
+        }
+        
+    }
 
     /* LG >= 992px */
-    @media screen and (min-width: 992px) {}
+    @media screen and (min-width: 992px) {
+
+        .recently-played .col{
+            width: calc(100% / 6);
+        }
+        
+    }
