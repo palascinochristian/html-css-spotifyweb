@@ -9,7 +9,7 @@
     border: 2px dashed lightcoral;
     background-color: rgba(240, 128, 128, 0.2);
     min-height: 200px;
-    
+
 }
 
 /*----------------
@@ -77,20 +77,26 @@ body {
     color: #fff;
 }
 
-h2{
-    padding-left: .625rem;
-}
 
-.section-container h3{
+.section-container h3 {
     font-size: 1rem;
 
 }
 
-
-.section-container span{
+.section-container span {
     font-size: .75rem;
     opacity: 0.8;
+
 }
+
+h2,
+.made-for span,
+.popular-artist span {
+    padding-left: .625rem;
+}
+
+
+
 /*----------------
     BUTTONS
 ------------------*/
@@ -300,7 +306,7 @@ main::-webkit-scrollbar {
     opacity: 0.7;
     font-weight: 600;
     text-align: center;
-    
+
 }
 
 .section-container {
@@ -313,21 +319,30 @@ main::-webkit-scrollbar {
     /* min-height: 100%; */
 }
 
-.recently-played .row{
+.recently-played .row {
     width: 100%;
     flex-wrap: wrap;
     margin: 0.875rem 0;
 }
-.recently-played .col{
+
+
+.recently-played .col,
+.made-for .col,
+.popular-artist .col {
     width: calc(100% / 2)
 }
 
+.made-for .row {
+    width: 100%;
+    margin: 0.875rem 0;
+}
 
-.album-cover{
+.album-cover {
     position: relative;
 
 }
-.album-cover img{
+
+.album-cover img {
     display: block;
 }
 
@@ -344,18 +359,18 @@ main::-webkit-scrollbar {
     display: none;
 }
 
-.album-cover .play{
+.album-cover .play {
     color: #fff;
     width: 100%;
     font-size: 3.125rem
 }
 
-.album-cover:hover .overlay{
+.album-cover:hover .overlay {
     display: block;
     z-index: 1;
 }
 
-.album-info{
+.album-info {
     padding-top: .625rem;
     text-align: center;
 }
@@ -387,7 +402,7 @@ footer {
 
 @media screen and (max-width: 479px) {
 
-    .album-info{
+    .album-info {
         text-wrap: nowrap;
         overflow: hidden;
     }
@@ -490,26 +505,32 @@ footer {
 
     }
 }
-    
 
-    /* MD >= 768px */
-    @media screen and (min-width: 768px) {
 
-        .recently-played .col{
-            width: calc(100% / 4);
-        }
+/* MD >= 768px */
+@media screen and (min-width: 768px) {
 
-        .album-cover{
-            max-width: 100%;
-        }
-        
+    .recently-played .col,
+    .made-for .col,
+    .popular-artist .col {
+
+        width: calc(100% / 4);
     }
 
-    /* LG >= 992px */
-    @media screen and (min-width: 992px) {
-
-        .recently-played .col{
-            width: calc(100% / 6);
-        }
-        
+    .album-cover {
+        max-width: 100%;
     }
+
+}
+
+/* LG >= 992px */
+@media screen and (min-width: 992px) {
+
+    .recently-played .col,
+    .made-for .col,
+    .popular-artist .col {
+
+        width: calc(100% / 6);
+    }
+
+}
