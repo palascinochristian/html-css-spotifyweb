@@ -1,18 +1,4 @@
 /*----------------
-    DEBUG
-------------------*/
-.debug .container {
-    border: 2px dashed blueviolet;
-}
-
-.debug .row .col {
-    border: 2px dashed lightcoral;
-    background-color: rgba(240, 128, 128, 0.2);
-    min-height: 200px;
-
-}
-
-/*----------------
     RESET
 ------------------*/
 * {
@@ -95,6 +81,15 @@ h2,
     padding-left: .625rem;
 }
 
+h4 {
+    font-size: .9375rem
+}
+
+hr {
+    color: #808080;
+    border: 2px solid;
+    border-radius: .625rem;
+}
 
 
 /*----------------
@@ -105,6 +100,8 @@ h2,
     font-family: inherit;
     border: none;
     cursor: pointer;
+    color: inherit;
+    font-size: inherit;
 }
 
 .up {
@@ -113,7 +110,12 @@ h2,
     border: 1px solid #fff;
     padding: .5rem 1.875rem;
     font-weight: 600;
-    margin-right: .9375rem
+    margin-right: .9375rem;
+    transition: transform 0.3s ease;
+}
+
+.up:hover {
+    transform: scale(1.2);
 }
 
 .add {
@@ -127,10 +129,7 @@ h2,
     font-weight: 600;
     margin-right: .625rem;
     opacity: 0.8;
-
 }
-
-
 
 /*----------------
     HEADER
@@ -246,17 +245,9 @@ header ul {
     MAIN
 ------------------*/
 
-.debug .main-container {
-    border: 2 px dashed red;
-}
-
 .main-container {
     display: flex;
-    height: calc(100% - 6.25rem);
-}
-
-.debug main {
-    border: 2px dashed pink;
+    height: calc(100% - 5.625rem);
 }
 
 main {
@@ -267,11 +258,6 @@ main {
 
 main::-webkit-scrollbar {
     display: none;
-}
-
-
-.debug .upgrade-bar {
-    border: 2px dashed orange
 }
 
 .upgrade-bar {
@@ -312,11 +298,6 @@ main::-webkit-scrollbar {
 .section-container {
     width: 100%;
     padding: 1.25rem;
-}
-
-.debug .section-container {
-    border: 2px solid red;
-    /* min-height: 100%; */
 }
 
 .recently-played .row {
@@ -375,7 +356,7 @@ main::-webkit-scrollbar {
     text-align: center;
 }
 
-.circle{
+.circle {
     border-radius: 100%;
 }
 
@@ -383,19 +364,144 @@ main::-webkit-scrollbar {
 /*----------------
     FOOTER
 ------------------*/
-.debug footer {
-    border: 2px dashed violet;
-    opacity: 1;
-}
-
 footer {
-    height: 6.25rem;
+    height: 5.625rem;
     flex-shrink: 0;
     position: sticky;
     bottom: 0;
     left: 0;
     z-index: 10;
     background-color: #282828;
+    display: flex;
+}
+
+footer .row {
+    width: 100%;
+    padding: .9375rem .625rem 0 .625rem;
+    justify-content: space-between;
+}
+
+footer .song,
+footer .volume {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+
+}
+
+footer .song-cover {
+    min-width: 3.125rem;
+    max-width: 3.125rem;
+    padding-right: .625rem;
+}
+
+
+footer .song-info {
+    line-height: 0.5;
+}
+
+.song-info span {
+    opacity: 0.8;
+    font-size: .875rem;
+}
+
+.song-info:hover span {
+    text-decoration: underline;
+    opacity: 1;
+}
+
+footer .icons {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+    gap: .3125rem;
+    font-size: 1.25rem;
+    padding: 0 .625rem;
+    flex-wrap: wrap;
+    color: #808080;
+}
+
+.fa-heart:hover,
+.fa-folder:hover {
+    color: #fff;
+}
+
+footer .player {
+    padding: 0 .9375rem;
+}
+
+footer .player-commands {
+    display: flex;
+    gap: 1.25rem;
+    justify-content: center;
+    align-items: center;
+    padding: 0 3.125rem;
+}
+
+footer .fa-circle-play {
+    font-size: 2.1875rem;
+    transition: transform 0.3s ease;
+}
+
+footer .fa-circle-play:hover {
+    transform: scale(1.2);
+
+}
+
+footer .songbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+    font-size: .875rem;
+}
+
+footer .songbar .bar {
+    width: 50%;
+}
+
+footer .volume .bar {
+    width: 30%;
+}
+
+footer .bar {
+    position: relative;
+    max-width: 100%;
+}
+
+.current {
+    width: 20%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+}
+
+.fa-circle {
+    position: absolute;
+    top: -0.3125rem;
+    left: 18%;
+    display: none;
+
+}
+
+footer .bar:hover .current {
+    color: #1ED760;
+}
+
+footer .bar:hover .fa-circle {
+    display: block;
+    z-index: 1;
+}
+
+.volume {
+    gap: .3125rem;
+    justify-content: flex-end;
+}
+
+.volume-commands {
+    display: flex;
+    gap: 1rem;
 }
 
 /*----------------
@@ -409,6 +515,17 @@ footer {
     .album-info {
         text-wrap: nowrap;
         overflow: hidden;
+    }
+
+    footer .song-cover,
+    footer .bar {
+        display: none;
+    }
+
+    footer .col {
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
     }
 }
 
@@ -508,6 +625,12 @@ footer {
         line-height: 5.25rem;
 
     }
+
+    footer .song,
+    footer .volume {
+        flex: 1;
+        min-width: 0;
+    }
 }
 
 
@@ -524,7 +647,6 @@ footer {
     .album-cover {
         max-width: 100%;
     }
-
 }
 
 /* LG >= 992px */
@@ -536,5 +658,4 @@ footer {
 
         width: calc(100% / 6);
     }
-
 }

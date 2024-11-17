@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="debugs">
+<body>
     <div class="main-container">
         <!-- HEADER  -->
         <header>
@@ -73,12 +73,12 @@
             </div>
             <nav class="genres-menu">
                 <ul>
-                    <li><a href="">IN EVIDENZA</a></li>
-                    <li><a href="">PODCAST</a></li>
-                    <li><a href="">CLASSIFICHE</a></li>
-                    <li><a href="">GENERI E MOOD</a></li>
-                    <li><a href="">NUOVE USCITE</a></li>
-                    <li><a href="">SCOPRI</a></li>
+                    <li><a href="#">IN EVIDENZA</a></li>
+                    <li><a href="#">PODCAST</a></li>
+                    <li><a href="#">CLASSIFICHE</a></li>
+                    <li><a href="#">GENERI E MOOD</a></li>
+                    <li><a href="#">NUOVE USCITE</a></li>
+                    <li><a href="#">SCOPRI</a></li>
                 </ul>
             </nav>
 
@@ -223,12 +223,55 @@
                         </div>
                     </div>
                 </section>
-
             </div>
-
         </main>
     </div>
-    <footer></footer>
+    <footer>
+        <div class="row">
+            <div class="col song">
+                <div class="song-cover">
+                    <img class="img-fluid" src="img/sinister.jpeg" alt="Sinister">
+                </div>
+                <div class="song-info">
+                    <h4>Prova</h4><br><span>Prova</span>
+                </div>
+                <div class="icons">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-regular fa-folder"></i>
+                </div>
+            </div>
+            <div class="col player grow">
+                <div class="player-commands">
+                    <button class="btn"><i class="fa-solid fa-shuffle"></i></button>
+                    <button class="btn"><i class="fa-solid fa-backward-step"></i></button>
+                    <button class="btn"><i class="fa-regular fa-circle-play"></i></button>
+                    <button class="btn"><i class="fa-solid fa-forward-step"></i></button>
+                    <button class="btn"><i class="fa-solid fa-rotate-right"></i></button>
+                </div>
+                <div class="songbar">
+                    <span>0:25</span>
+                    <div class="bar">
+                        <i class="fa-solid fa-circle"></i>
+                        <hr>
+                        <hr class="current">
+                    </div>
+                    <span>4:35</span>
+                </div>
+            </div>
+            <div class="col volume">
+                <div class="volume-commands">
+                    <button class="btn"><i class="fa-solid fa-list"></i></button>
+                    <button class="btn"><i class="fa-solid fa-tv"></i></button>
+                    <button class="btn"><i class="fa-solid fa-volume-high"></i></button>
+                </div>
+                <div class="bar">
+                    <i class="fa-solid fa-circle"></i>
+                    <hr>
+                    <hr class="current">
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
