@@ -375,6 +375,10 @@ main::-webkit-scrollbar {
     text-align: center;
 }
 
+.circle{
+    border-radius: 100%;
+}
+
 
 /*----------------
     FOOTER
