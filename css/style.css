@@ -652,7 +652,7 @@ footer .bar:hover .fa-circle {
     .upgrade-bar {
         min-height: 5.25rem;
         line-height: 5.25rem;
-
+        opacity: 0.8;
     }
 
     footer .song,
